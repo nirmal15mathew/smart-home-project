@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <section class="loaded" v-if="socketConnected">
+            <h1>Welcome to home control</h1>
+            <p>Light is: {{ trigger ? 'ON' : 'OFF'}}</p>
+            <button id="trigger" @click="onTrigger">Click here</button>
+        </section>
+        <section class="loader" v-else>
+            <div class="loading-dots">
+                <ul class="dots">
+                    <li class="dot d1"></li>
+                    <li class="dot d2"></li>
+                    <li class="dot d3"></li>
+                </ul>
+            </div>
+            <h2>Connecting...</h2>
+        </section>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="scripts/vue.js"></script>
+    <script src="scripts/main.js" defer></script>
+</body>
+</html>

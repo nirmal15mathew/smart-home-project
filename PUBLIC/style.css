@@ -1,0 +1,68 @@
+body, * {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    list-style: none;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #e7e6e6;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.loader {
+    height: 250px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+.dots {
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#trigger {
+    background-color: rgb(216, 46, 46);
+    padding: 0.5em;
+    color: white;
+    margin: 1em;
+    border-radius: 0.3em;
+}
+.dot {
+    height: 1.2em;
+    width: 1.2em;
+    background-color: rgb(51, 51, 51);
+    border-radius: 0.5em;
+    animation: ripple 2s ease-in-out infinite;
+}
+.d1 {
+    animation-delay: 100ms;
+}
+.d2 {
+    animation-delay: 200ms;
+}
+.d3 {
+    animation-delay: 300ms;
+}
+h2 {
+    padding: 1em;
+}
+@keyframes ripple{
+    0% {
+        transform: translate(0);
+    }
+    50% {
+        transform: translateY(-300%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
