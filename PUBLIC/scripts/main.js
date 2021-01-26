@@ -1,8 +1,9 @@
+const myIp = 'write-your-ip-here'
 var app = new Vue({
     el: '#app',
     data: {
         trigger: false,
-        socket: io.connect('192.168.42.19:3000')
+        socket: io.connect(`${myIp}:3000`)
     },
     computed: {
         socketConnected: function (){
